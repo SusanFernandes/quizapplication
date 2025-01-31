@@ -104,7 +104,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-6">
+        <div className="max-w-4xl mx-auto p-6 pt-20 space-y-5">
             <div className="bg-[#222222] rounded-lg shadow-lg p-6 mb-6">
                 <div className="flex justify-between items-center mb-4">
                     <h1 className="text-2xl font-bold">{quiz.title}</h1>
@@ -120,7 +120,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
 
             <div className="bg-[#222222] rounded-lg shadow-lg p-6">
                 <div className="mb-6">
-                    <span className="text-sm text-white-500">
+                    <span className="text-sm text-white-700">
                         Question {currentQuestionIndex + 1} of {quiz.questions.length}
                     </span>
                     <p className="text-lg mt-2">{currentQuestion.description}</p>
@@ -132,9 +132,10 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                             key={option.id}
                             onClick={() => handleAnswerSelect(currentQuestion.id, option.id)}
                             className={`w-full text-left p-4 rounded-lg border transition-colors ${selectedAnswers[currentQuestion.id] === option.id
-                                ? 'bg-blue-50 border-blue-500'
-                                : 'border-gray-100 hover:bg-[#222222]-50'
+                                ? 'px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg'
+                                : 'border-gray-100 hover:bg-[#222222]/50'
                                 }`}
+
                         >
                             {option.description}
                         </button>
@@ -160,7 +161,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                     ) : (
                         <button
                             onClick={() => setCurrentQuestionIndex((prev) => prev + 1)}
-                            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+                            className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg"
                         >
                             Next
                         </button>
