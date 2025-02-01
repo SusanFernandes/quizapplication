@@ -1,9 +1,15 @@
 "use client"
-
 import { motion } from "framer-motion"
+import { useRouter } from 'next/navigation'
 import { Palette, Microscope, Cloud, Atom, Globe2, Calculator, Languages, Telescope, Heart } from "lucide-react"
+import { FC } from 'react'  // Add this import for TypeScript
 
-const subjects = [
+interface Subject {
+  icon: FC
+  name: string
+}
+
+const subjects: Subject[] = [
   { icon: Palette, name: "Art" },
   { icon: Microscope, name: "Science" },
   { icon: Cloud, name: "Weather" },
@@ -15,7 +21,9 @@ const subjects = [
   { icon: Heart, name: "Health" },
 ]
 
-const HeroSection = () => {
+const HeroSection: FC = () => {
+  const router = useRouter()
+
   return (
     <section className="min-h-screen pt-20 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -39,14 +47,8 @@ const HeroSection = () => {
           >
             Embark on a Journey of Knowledge Exploration with Our Extensive Collection of Interactive Quizzes.
           </motion.p>
-          <motion.button
-            className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Play now
-          </motion.button>
         </div>
+
 
         <div className="space-y-6 md:space-y-8">
           <motion.h2
@@ -76,14 +78,24 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
+
+      </div>
+      <div className="space-y-5">
+        <button
+          className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg"
+          // whileHover={{ scale: 1.05 }}
+          // whileTap={{ scale: 0.95 }}
+          onClick={() => router.push('/quiz')}
+        >
+          Play now
+        </button>
       </div>
 
       {/* Background Decorative Elements */}
       <div className="absolute top-1/4 right-0 w-64 h-64 bg-gradient-to-r from-[#ff715b] to-[#ffad05] rounded-full filter blur-3xl opacity-20 animate-pulse" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-gradient-to-r from-[#ff715b] to-[#ffad05] rounded-full filter blur-3xl opacity-20 animate-pulse delay-1000" />
-    </section>
+    </section >
   )
 }
 
 export default HeroSection
-

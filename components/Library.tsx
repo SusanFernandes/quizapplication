@@ -146,8 +146,8 @@ const Library = () => {
                         <h1 className="text-3xl font-bold text-white-800">Study Library</h1>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <BarChart className="w-5 h-5 text-gray-600" />
-                        <span className="text-gray-600">
+                        <BarChart className="w-5 h-5 text-white-600" />
+                        <span className="text-white-600">
                             Progress: {Object.values(progress).filter(Boolean).length} / {
                                 Object.values(studyMaterial).flat().length
                             }
@@ -177,7 +177,7 @@ const Library = () => {
                         <select
                             value={difficultyFilter}
                             onChange={(e) => setDifficultyFilter(e.target.value)}
-                            className="bg-[#222222] text-white border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="bg-[#222222] text-gray border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="all">All Difficulties</option>
                             <option value="easy">Easy</option>
@@ -199,8 +199,8 @@ const Library = () => {
                         <button
                             onClick={() => setShowBookmarksOnly(!showBookmarksOnly)}
                             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${showBookmarksOnly
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-[#333333] text-white hover:bg-[#444444]'
+                                ? 'bg-blue-600 text-white'
+                                : 'bg-[#333333] text-white hover:bg-[#444444]'
                                 }`}
                         >
                             <BookmarkCheck className="w-5 h-5" />
@@ -222,13 +222,13 @@ const Library = () => {
                                     key={topic}
                                     onClick={() => setSelectedTopic(topic)}
                                     className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${selectedTopic === topic
-                                        ? 'bg-blue-50 text-blue-700'
-                                        : 'hover:bg-gray-50'
+                                        ? 'bg-gray-800 text-[#ffed29]'
+                                        : 'hover:bg-gray-800'
                                         }`}
                                 >
                                     <div className="flex justify-between items-center">
                                         <span>{topic}</span>
-                                        <span className="text-sm text-gray-500">
+                                        <span className="text-sm text-white-500">
                                             {studyMaterial[topic].length} items
                                         </span>
                                     </div>
@@ -243,29 +243,27 @@ const Library = () => {
                     <div className="bg-[#222222] rounded-lg shadow-lg p-6">
                         {selectedTopic ? (
                             <div className="space-y-8">
-                                <h2 className="text-xl font-semibold text-gray-800 mb-6">
+                                <h2 className="text-xl font-semibold text-white-500 mb-6">
                                     {selectedTopic}
                                 </h2>
                                 {filterAndSortQuestions(studyMaterial[selectedTopic]).map((item, index) => (
-                                    <div key={item.id} className="border-b last:border-b-0 pb-6">
+                                    <div key={item.id} className="border-b border-[#ffed29] last:border-b-0 pb-6">
                                         <div className="flex items-start space-x-2">
                                             <div className="flex-1">
                                                 <div className="flex items-center justify-between mb-2">
-                                                    <h3 className="text-lg font-medium text-gray-800">
+                                                    <h3 className="text-lg font-medium text-[#f5f5f5]">
                                                         Question {index + 1}
                                                     </h3>
                                                     <div className="flex items-center space-x-2">
                                                         <button
                                                             onClick={() => toggleProgress(item.id)}
-                                                            className={`p-2 rounded-lg ${progress[item.id] ? 'text-green-600' : 'text-gray-400'
-                                                                }`}
+                                                            className={`p-2 rounded-xl ${progress[item.id] ? 'text-green-600' : 'text-gray-400'}`}
                                                         >
                                                             <AlertCircle className="w-5 h-5" />
                                                         </button>
                                                         <button
                                                             onClick={() => toggleBookmark(item.id)}
-                                                            className={`p-2 rounded-lg ${bookmarks.includes(item.id) ? 'text-blue-600' : 'text-gray-400'
-                                                                }`}
+                                                            className={`p-2 rounded-lg ${bookmarks.includes(item.id) ? 'text-blue-600' : 'text-gray-400'}`}
                                                         >
                                                             {bookmarks.includes(item.id) ? (
                                                                 <BookmarkCheck className="w-5 h-5" />
@@ -276,22 +274,23 @@ const Library = () => {
                                                     </div>
                                                 </div>
 
-                                                <p className="text-gray-700 mb-4">{item.question}</p>
+                                                <p className="text-[#f5f5f5] mb-4">{item.question}</p>
 
-                                                <div className="bg-green-50 p-4 rounded-lg mb-4">
-                                                    <p className="font-medium text-green-800">Correct Answer:</p>
-                                                    <p className="text-green-700">{item.correctAnswer}</p>
+                                                <div className="bg-[#222222] p-4 rounded-lg mb-4">
+                                                    <p className="font-medium text-[#f5f5f5]">Correct Answer:</p>
+                                                    <p className="text-[#f5f5f5]">{item.correctAnswer}</p>
                                                 </div>
-
-                                                <div className="bg-blue-50 p-4 rounded-lg">
+                                                <div className="bg-[#222222] p-4 rounded-lg">
                                                     <div className="flex items-center space-x-2 mb-2">
                                                         <AlertCircle className="w-5 h-5 text-blue-600" />
-                                                        <p className="font-medium text-blue-800">Explanation:</p>
+                                                        <p className="font-medium text-[#f5f5f5]">Explanation:</p>
                                                     </div>
-                                                    <p className="text-blue-700">{item.explanation}</p>
+                                                    <p className="text-[#f5f5f5]">{item.explanation.replace(/\*\*/g, '').replace(/\*/g, '')}</p>
                                                 </div>
 
-                                                <div className="mt-4 flex items-center space-x-4 text-sm text-gray-500">
+
+
+                                                <div className="mt-4 flex items-center space-x-4 text-sm text-[#f5f5f5]">
                                                     <span className="flex items-center space-x-1">
                                                         <Filter className="w-4 h-4" />
                                                         <span>Difficulty: {item.difficulty}</span>

@@ -8,7 +8,7 @@ const leaderboardData = {
     weekly: [
         {
             rank: 1,
-            name: "Sarah Johnson",
+            name: "Susan Fernandes ",
             score: 2850,
             quizzes: 45,
             accuracy: "98%",
@@ -16,7 +16,7 @@ const leaderboardData = {
         },
         {
             rank: 2,
-            name: "Michael Chen",
+            name: "Shaun Mendes",
             score: 2720,
             quizzes: 42,
             accuracy: "96%",
@@ -24,7 +24,7 @@ const leaderboardData = {
         },
         {
             rank: 3,
-            name: "Emma Wilson",
+            name: "Sharian Dabre",
             score: 2680,
             quizzes: 40,
             accuracy: "95%",
@@ -32,7 +32,7 @@ const leaderboardData = {
         },
         {
             rank: 4,
-            name: "James Smith",
+            name: "Sanika Haldankar",
             score: 2550,
             quizzes: 38,
             accuracy: "94%",
@@ -40,7 +40,7 @@ const leaderboardData = {
         },
         {
             rank: 5,
-            name: "Lisa Anderson",
+            name: "Anushka Kadam",
             score: 2490,
             quizzes: 37,
             accuracy: "93%",
@@ -51,7 +51,7 @@ const leaderboardData = {
     monthly: [
         {
             rank: 1,
-            name: "David Miller",
+            name: "Sanika Haldankar",
             score: 10500,
             quizzes: 180,
             accuracy: "97%",
@@ -59,7 +59,7 @@ const leaderboardData = {
         },
         {
             rank: 2,
-            name: "Sophie Turner",
+            name: "Susan Fernandes",
             score: 9800,
             quizzes: 165,
             accuracy: "95%",
@@ -67,7 +67,7 @@ const leaderboardData = {
         },
         {
             rank: 3,
-            name: "Alex Martinez",
+            name: "Sharian Dabre",
             score: 9600,
             quizzes: 160,
             accuracy: "94%",
@@ -75,7 +75,7 @@ const leaderboardData = {
         },
         {
             rank: 4,
-            name: "Emily Brown",
+            name: "Shaun Mendes",
             score: 9400,
             quizzes: 155,
             accuracy: "93%",
@@ -83,7 +83,7 @@ const leaderboardData = {
         },
         {
             rank: 5,
-            name: "Ryan Taylor",
+            name: "Alisha Fernandes",
             score: 9200,
             quizzes: 150,
             accuracy: "92%",
@@ -94,7 +94,7 @@ const leaderboardData = {
     allTime: [
         {
             rank: 1,
-            name: "John Doe",
+            name: "Susan Fernandes",
             score: 52000,
             quizzes: 850,
             accuracy: "99%",
@@ -102,7 +102,7 @@ const leaderboardData = {
         },
         {
             rank: 2,
-            name: "Jane Smith",
+            name: "Sanika Haldankar",
             score: 48000,
             quizzes: 820,
             accuracy: "97%",
@@ -110,7 +110,7 @@ const leaderboardData = {
         },
         {
             rank: 3,
-            name: "Mike Johnson",
+            name: "Alisha Fernandes",
             score: 45000,
             quizzes: 800,
             accuracy: "96%",
@@ -118,7 +118,7 @@ const leaderboardData = {
         },
         {
             rank: 4,
-            name: "Sarah Williams",
+            name: "Shaun Mendes",
             score: 42000,
             quizzes: 780,
             accuracy: "95%",
@@ -126,7 +126,7 @@ const leaderboardData = {
         },
         {
             rank: 5,
-            name: "Chris Davis",
+            name: "Sharian Dabre",
             score: 40000,
             quizzes: 760,
             accuracy: "94%",
@@ -166,14 +166,14 @@ const LeaderboardComponent = () => {
 
                 {/* Leaderboard Tabs */}
                 <Tabs defaultValue="weekly" className="w-full">
-                    <TabsList className="w-full max-w-md mx-auto mb-8">
-                        <TabsTrigger value="weekly" className="flex-1">
+                    <TabsList className="w-full max-w-md rounded-xl mx-auto mb-8">
+                        <TabsTrigger value="weekly" className="flex-1 rounded-xl">
                             Weekly
                         </TabsTrigger>
-                        <TabsTrigger value="monthly" className="flex-1">
+                        <TabsTrigger value="monthly" className="flex-1 rounded-xl">
                             Monthly
                         </TabsTrigger>
-                        <TabsTrigger value="allTime" className="flex-1">
+                        <TabsTrigger value="allTime" className="flex-1 rounded-xl">
                             All Time
                         </TabsTrigger>
                     </TabsList>
@@ -230,7 +230,7 @@ const LeaderboardComponent = () => {
                                             initial={{ opacity: 0, x: -20 }}
                                             animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: (index + 3) * 0.1 }}
-                                            className="bg-white bg-opacity-5 rounded-lg p-4 hover:bg-opacity-10 transition-all duration-200"
+                                            className="bg-white bg-opacity-5 rounded-xl p-4 hover:bg-opacity-10 transition-all duration-200"
                                         >
                                             <div className="flex items-center gap-4">
                                                 <div className="flex items-center gap-3 flex-1">
@@ -286,7 +286,7 @@ const LeaderboardComponent = () => {
                             <motion.div
                                 key={index}
                                 whileHover={{ scale: 1.05 }}
-                                className="bg-white bg-opacity-5 p-4 rounded-lg backdrop-blur-sm w-40"
+                                className="bg-white bg-opacity-5 p-4 rounded-xl backdrop-blur-sm w-40"
                             >
                                 <achievement.icon className="w-8 h-8 text-[#ffad05] mx-auto mb-2" />
                                 <h3 className="font-medium mb-1">{achievement.name}</h3>
