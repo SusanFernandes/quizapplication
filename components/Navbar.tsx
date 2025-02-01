@@ -50,12 +50,12 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink href="/library" mobile>
-              Library
+              Learn
             </NavLink>
-            <NavLink href="/courses" mobile>
-              Courses
+            <NavLink href="/leaderboard" mobile>
+              Leaderboard
             </NavLink>
-            <NavLink href="/test" mobile>
+            <NavLink href="/quiz" mobile>
               Test
             </NavLink>
             <motion.button
@@ -67,8 +67,9 @@ const Navbar = () => {
             </motion.button>
           </div>
         </div>
-      )}
-    </nav>
+      )
+      }
+    </nav >
   )
 }
 
