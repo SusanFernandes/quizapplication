@@ -83,8 +83,8 @@ const HeroSection: FC = () => {
       <div className="space-y-5">
         <button
           className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg"
-          // whileHover={{ scale: 1.05 }}
-          // whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => router.push('/quiz')}
         >
           Play now

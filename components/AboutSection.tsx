@@ -29,14 +29,14 @@ const features = [
 const testimonials = [
   {
     text: "I've always struggled with math, but these quizzes have really helped me to improve my grades. The explanations are clear and concise, and they help me to understand the concepts",
-    author: "Steve Hanstead",
+    author: "TipuChan Ferns",
     role: "Math enthusiast",
     avatar: "/placeholder.svg?height=80&width=80",
     rating: 5,
   },
   {
     text: "The interactive nature of these quizzes makes learning fun. I've seen a significant improvement in my test scores since I started using this platform.",
-    author: "Sarah Johnson",
+    author: "Billu Ferns",
     role: "Student",
     avatar: "/placeholder.svg?height=80&width=80",
     rating: 5,
@@ -58,7 +58,7 @@ const AboutSection = () => {
   return (
     <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Why Quizify Section */}
+        {/* Why Us Section */}
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-transparent bg-clip-text"
           initial={{ opacity: 0, y: 20 }}
@@ -159,9 +159,8 @@ const AboutSection = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                className={`relative cursor-pointer transition-opacity duration-300 ${
-                  index === currentTestimonial ? "opacity-100" : "opacity-50"
-                }`}
+                className={`relative cursor-pointer transition-opacity duration-300 ${index === currentTestimonial ? "opacity-100" : "opacity-50"
+                  }`}
                 onClick={() => setCurrentTestimonial(index)}
                 whileHover={{ scale: 1.1 }}
               >

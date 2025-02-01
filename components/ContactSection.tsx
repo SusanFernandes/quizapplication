@@ -5,17 +5,17 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "What is Quizify?",
+    question: "What is QuizMaster?",
     answer:
-      "Quizify is an interactive learning platform that offers engaging quizzes across various subjects to help students learn and improve their knowledge in a fun way.",
+      "QuizMaster is an interactive learning platform that offers engaging quizzes across various subjects to help students learn and improve their knowledge in a fun way.",
   },
   {
-    question: "What are the benefits of using Quizify?",
+    question: "What are the benefits of using QuizMaster?",
     answer:
-      "Quizify offers personalized learning experiences, instant feedback, progress tracking, and a wide range of subjects. It helps improve retention and makes learning more engaging.",
+      "QuizMaster offers personalized learning experiences, instant feedback, progress tracking, and a wide range of subjects. It helps improve retention and makes learning more engaging.",
   },
   {
-    question: "How do I create a Quizify account?",
+    question: "How do I create a QuizMaster account?",
     answer:
       "Simply click the 'Sign Up' button, enter your details, and follow the verification process. You'll have access to our platform within minutes.",
   },
@@ -95,8 +95,8 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <span className="text-[#ffad05]">Email:</span>
-                  <a href="mailto:Quizify@outlook.com" className="text-gray-300 hover:text-[#ffad05]">
-                    Quizify@outlook.com
+                  <a href="mailto:QuizMaster@outlook.com" className="text-gray-300 hover:text-[#ffad05]">
+                    QuizMaster@outlook.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
