@@ -257,7 +257,7 @@ const Library = () => {
                                                     <div className="flex items-center space-x-2">
                                                         <button
                                                             onClick={() => toggleProgress(item.id)}
-                                                            className={`p-2 rounded-xl ${progress[item.id] ? 'text-green-600' : 'text-gray-400'}`}
+                                                            className={`p-2 rounded-xl ${progress[item.id] ? 'text-[#1bfc06]' : 'text-gray-400'}`}
                                                         >
                                                             <AlertCircle className="w-5 h-5" />
                                                         </button>

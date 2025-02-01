@@ -83,9 +83,9 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                                         <div
                                             key={option.id}
                                             className={`border rounded-lg p-2 ${option.is_correct
-                                                ? 'text-green-600 border-green-500'
+                                                ? 'text-[#1bfc06] border-[#1bfc06]'
                                                 : selectedAnswers[question.id] === option.id
-                                                    ? 'text-red-600 border-red-500'
+                                                    ? 'text-red-400 border-red-500'
                                                     : 'border-gray-500'
                                                 }`}
                                         >
@@ -159,7 +159,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                     {currentQuestionIndex === quiz.questions.length - 1 ? (
                         <button
                             onClick={handleSubmit}
-                            className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                            className="px-4 py-2 bg-[#1bfc06] text-white rounded-lg hover:[#1bfc06]"
                         >
                             Submit Quiz
                         </button>
