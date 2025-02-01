@@ -69,20 +69,20 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
     if (isFinished) {
         return (
             <div className="max-w-4xl mx-auto p-6 pt-20 space-y-6">
-                <div className="bg-[#222222] rounded-lg shadow-lg p-6">
+                <div className="bg-[#222222] rounded-xl shadow-lg p-6">
                     <h2 className="text-2xl font-bold mb-4">Quiz Results</h2>
                     <div className="mb-4">
                         <p className="text-lg">Final Score: {calculateScore()}</p>
                     </div>
                     <div className="space-y-4">
                         {quiz.questions.map((question, index) => (
-                            <div key={question.id} className="border rounded-lg p-4">
+                            <div key={question.id} className="border rounded-xl p-4">
                                 <p className="font-medium mb-2">Question {index + 1} : {question.description}</p>
                                 <div className="space-y-2">
                                     {question.options.map((option) => (
                                         <div
                                             key={option.id}
-                                            className={`border rounded-lg p-2 ${option.is_correct
+                                            className={`border rounded-xl p-2 ${option.is_correct
                                                 ? 'text-[#1bfc06] border-[#1bfc06]'
                                                 : selectedAnswers[question.id] === option.id
                                                     ? 'text-red-400 border-red-500'
@@ -110,7 +110,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
 
     return (
         <div className="max-w-4xl mx-auto p-6 pt-20 space-y-5">
-            <div className="bg-[#222222] rounded-lg shadow-lg p-6 mb-6">
+            <div className="bg-[#222222] rounded-xl shadow-lg p-6 mb-6">
                 <div className="flex justify-between items-center mb-4">
                     <h1 className="text-2xl font-bold">{quiz.title}</h1>
                     <div className="flex items-center space-x-2">
@@ -123,7 +123,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                 <p className="text-white-600">{quiz.topic}</p>
             </div>
 
-            <div className="bg-[#222222] rounded-lg shadow-lg p-6">
+            <div className="bg-[#222222] rounded-xl shadow-lg p-6">
                 <div className="mb-6">
                     <span className="text-sm text-white-700">
                         Question {currentQuestionIndex + 1} of {quiz.questions.length}
@@ -136,7 +136,7 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                         <button
                             key={option.id}
                             onClick={() => handleAnswerSelect(currentQuestion.id, option.id)}
-                            className={`w-full text-left p-4 rounded-lg border transition-colors ${selectedAnswers[currentQuestion.id] === option.id
+                            className={`w-full text-left p-4 rounded-xl border transition-colors ${selectedAnswers[currentQuestion.id] === option.id
                                 ? 'px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg'
                                 : 'border-gray-100 hover:bg-[#222222]/50'
                                 }`}
@@ -159,14 +159,14 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                     {currentQuestionIndex === quiz.questions.length - 1 ? (
                         <button
                             onClick={handleSubmit}
-                            className="px-4 py-2 bg-[#1bfc06] text-white rounded-lg hover:[#1bfc06]"
+                            className="px-4 py-2 bg-green-600 text-white rounded-xl hover:green-600"
                         >
                             Submit Quiz
                         </button>
                     ) : (
                         <button
                             onClick={() => setCurrentQuestionIndex((prev) => prev + 1)}
-                            className="px-8 py-3 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg"
+                            className="px-8 py-3 rounded-xl bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium text-lg shadow-lg"
                         >
                             Next
                         </button>
