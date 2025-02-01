@@ -137,13 +137,13 @@ const Library = () => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto p-6">
+        <div className="max-w-7xl mx-auto p-6 bg-[#222222] text-white-800">
             {/* Header with Search and Filters */}
             <div className="mb-8">
                 <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-3">
                         <Book className="w-8 h-8 text-blue-600" />
-                        <h1 className="text-3xl font-bold text-gray-800">Study Library</h1>
+                        <h1 className="text-3xl font-bold text-white-800">Study Library</h1>
                     </div>
                     <div className="flex items-center space-x-4">
                         <BarChart className="w-5 h-5 text-gray-600" />
@@ -156,9 +156,9 @@ const Library = () => {
                 </div>
 
                 {/* Search and Filters Bar */}
-                <div className="bg-white rounded-lg shadow-lg p-4 flex flex-wrap gap-4">
+                <div className="bg-[#222222] border-gray-600 rounded-lg shadow-lg p-4 flex flex-wrap gap-4">
                     {/* Search */}
-                    <div className="flex-1 min-w-[200px]">
+                    <div className="flex-1 min-w-[200px] bg-[#222222]">
                         <div className="relative">
                             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                             <input
@@ -166,7 +166,8 @@ const Library = () => {
                                 placeholder="Search questions..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full pl-10 pr-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 
+            bg-[#222222] text-white placeholder-gray-400 border-gray-700"
                             />
                         </div>
                     </div>
@@ -176,7 +177,7 @@ const Library = () => {
                         <select
                             value={difficultyFilter}
                             onChange={(e) => setDifficultyFilter(e.target.value)}
-                            className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="bg-[#222222] text-white border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="all">All Difficulties</option>
                             <option value="easy">Easy</option>
@@ -187,7 +188,7 @@ const Library = () => {
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value)}
-                            className="border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="bg-[#222222] text-white border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <option value="default">Default Sort</option>
                             <option value="difficulty">Sort by Difficulty</option>
@@ -197,7 +198,9 @@ const Library = () => {
 
                         <button
                             onClick={() => setShowBookmarksOnly(!showBookmarksOnly)}
-                            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${showBookmarksOnly ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'
+                            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${showBookmarksOnly
+                                    ? 'bg-blue-600 text-white'
+                                    : 'bg-[#333333] text-white hover:bg-[#444444]'
                                 }`}
                         >
                             <BookmarkCheck className="w-5 h-5" />
@@ -211,7 +214,7 @@ const Library = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {/* Topics sidebar */}
                 <div className="md:col-span-1">
-                    <div className="bg-white rounded-lg shadow-lg p-4 sticky top-4">
+                    <div className="bg-[#222222] rounded-lg shadow-lg p-4 sticky top-4">
                         <h2 className="text-lg font-semibold mb-4">Topics</h2>
                         <div className="space-y-2">
                             {Object.keys(studyMaterial).map((topic) => (
@@ -237,7 +240,7 @@ const Library = () => {
 
                 {/* Questions and answers */}
                 <div className="md:col-span-3">
-                    <div className="bg-white rounded-lg shadow-lg p-6">
+                    <div className="bg-[#222222] rounded-lg shadow-lg p-6">
                         {selectedTopic ? (
                             <div className="space-y-8">
                                 <h2 className="text-xl font-semibold text-gray-800 mb-6">

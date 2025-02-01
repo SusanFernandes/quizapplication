@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${inter.className} bg-gradient-to-b from-[#222222] to-[#0d1821] text-[#fffff2] min-h-screen flex flex-col`}
       >
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-20">{children}</main>
         <Footer />
       </body>
     </html>

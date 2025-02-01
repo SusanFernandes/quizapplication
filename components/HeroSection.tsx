@@ -48,7 +48,7 @@ const HeroSection = () => {
           </motion.button>
         </div>
 
-        <div className="space-y-6 pt-20">
+        <div className="space-y-6 md:space-y-8">
           <motion.h2
             className="text-2xl font-semibold mb-8"
             initial={{ opacity: 0 }}

@@ -151,7 +151,7 @@ const getRankIcon = (rank: number) => {
 
 const LeaderboardComponent = () => {
     return (
-        <div className="min-h-screen pt-24 pb-16 px-4">
+        <div className="min-h-screen pt-20 pb-16 px-4">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
@@ -191,10 +191,10 @@ const LeaderboardComponent = () => {
                                                 animate={{ opacity: 1, y: 0 }}
                                                 transition={{ delay: index * 0.1 }}
                                                 className={`relative p-6 rounded-xl ${user.rank === 1
-                                                        ? "bg-gradient-to-b from-yellow-400/10 to-transparent"
-                                                        : user.rank === 2
-                                                            ? "bg-gradient-to-b from-gray-400/10 to-transparent"
-                                                            : "bg-gradient-to-b from-amber-600/10 to-transparent"
+                                                    ? "bg-gradient-to-b from-yellow-400/10 to-transparent"
+                                                    : user.rank === 2
+                                                        ? "bg-gradient-to-b from-gray-400/10 to-transparent"
+                                                        : "bg-gradient-to-b from-amber-600/10 to-transparent"
                                                     }`}
                                             >
                                                 <div className="absolute top-2 right-2">{getRankIcon(user.rank)}</div>
