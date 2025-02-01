@@ -95,8 +95,8 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
                                     ))}
                                 </div>
                                 {selectedAnswers[question.id] && (
-                                    <div className="mt-2 p-2 bg-[#333333] rounded">
-                                        <p className="font-medium">Explanation:</p>
+                                    <div className="mt-2 p-2 bg-[#333333] rounded-xl">
+                                        <p className="font-medium ">Explanation:</p>
                                         <p>{question.detailed_solution.replace(/\*\*|"""|__|~~/g, '')}</p>
                                     </div>
                                 )}
