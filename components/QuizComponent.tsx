@@ -33,17 +33,22 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
 
     const calculateScore = () => {
         let score = 0;
+        const correctMarks = Number(quiz.correct_answer_marks) || 4.0; // Default to 4.0 if not provided
+        const negativeMarks = Number(quiz.negative_marks) || 1.0; // Default to 1.0 if not provided
 
-        Object.entries(selectedAnswers).forEach(([questionId, selectedOptionId]) => {
-            // Ensure question ID comparison works correctly
-            const question = quiz.questions.find((q) => String(q.id) === questionId);
-            if (!question) return;
+        // Process each question
+        quiz.questions.forEach((question) => {
+            const selectedAnswer = selectedAnswers[question.id];
 
-            const selectedOption = question.options.find((o) => String(o.id) === selectedOptionId);
+            // If question is not attempted, no marks deducted
+            if (selectedAnswer === undefined) {
+                return;
+            }
 
-            // Ensure the values are correctly converted to numbers
-            const correctMarks = Number(quiz.correct_answer_marks) || 0;
-            const negativeMarks = Number(quiz.negative_marks) || 0;
+            // Find the selected option
+            const selectedOption = question.options.find(
+                (o) => o.id === selectedAnswer
+            );
 
             if (selectedOption?.is_correct) {
                 score += correctMarks;
@@ -52,9 +57,9 @@ export default function QuizComponent({ quiz }: QuizComponentProps) {
             }
         });
 
-        return score;
+        // Ensure score doesn't go below 0 if needed
+        return Math.max(score, 0);
     };
-
     const currentQuestion: Question = quiz.questions[currentQuestionIndex];
 
     const handleSubmit = () => {

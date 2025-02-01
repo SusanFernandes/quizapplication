@@ -20,15 +20,17 @@ const Navbar = () => {
           </Link>
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/">Home</NavLink>
-            <NavLink href="/library">Library</NavLink>
-            <NavLink href="/courses">Courses</NavLink>
-            <NavLink href="/test">Test</NavLink>
+            <NavLink href="/study">Learn</NavLink>
+            <NavLink href="/leaderboard">Leaderboard</NavLink>
+            {/* <NavLink href="/quiz">Test</NavLink> */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2 rounded-full bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium"
             >
-              Sign up
+              <NavLink href="/quiz">
+                Quiz
+              </NavLink>
             </motion.button>
           </div>
           <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2">
@@ -49,7 +51,7 @@ const Navbar = () => {
             <NavLink href="/" mobile>
               Home
             </NavLink>
-            <NavLink href="/library" mobile>
+            <NavLink href="/study" mobile>
               Learn
             </NavLink>
             <NavLink href="/leaderboard" mobile>

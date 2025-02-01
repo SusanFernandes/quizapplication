@@ -41,16 +41,16 @@ const ContactSection = () => {
     <section id="contact" className="relative pt-16 pb-24">
       {/* Wave Pattern */}
       {/* <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-r from-[#ff715b] to-[#ffad05] overflow-hidden">
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
-            <path
-              fill="#0d1821"
-              fillOpacity="1"
-              d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,234.7C960,235,1056,181,1152,170.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-        </div>
-      </div> */}
+            <div className="absolute bottom-0 left-0 right-0">
+              <svg viewBox="0 0 1440 320" className="w-full h-auto" preserveAspectRatio="none">
+                <path
+                  fill="#0d1821"
+                  fillOpacity="1"
+                  d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,234.7C960,235,1056,181,1152,170.7C1248,160,1344,192,1392,208L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                ></path>
+              </svg>
+            </div>
+          </div> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
         <div className="text-center mb-16">
@@ -153,34 +153,34 @@ const ContactSection = () => {
                 <input
                   type="text"
                   placeholder="Enter your name"
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
                 />
               </div>
               <div>
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
                 />
               </div>
               <div>
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
                 />
               </div>
               <div>
                 <textarea
                   placeholder="Write your message..."
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white bg-opacity-5 border border-gray-700 focus:border-[#ffad05] focus:ring-2 focus:ring-[#ffad05] transition-colors"
                 ></textarea>
               </div>
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium hover:shadow-lg transition-shadow"
+                className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-[#ff715b] to-[#ffad05] text-white font-medium hover:shadow-lg transition-shadow"
               >
                 Submit
               </motion.button>
