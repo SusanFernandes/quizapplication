@@ -49,13 +49,6 @@ npm run dev
 - 🎨 **CSS Modules,Tailwind CSS** (for styling)
 - 🌐 **REST API** (for fetching quiz data)
 
-## 🤝 How to Contribute
-1. 🍴 Fork the repository.
-2. 🌿 Create a new branch: `git checkout -b feature-branch-name`
-3. ✍️ Commit your changes: `git commit -m 'Add new feature'`
-4. 🚀 Push to the branch: `git push origin feature-branch-name`
-5. 🔃 Open a Pull Request.
-
 ## 📜 License
 This project is licensed under the MIT License.
 
