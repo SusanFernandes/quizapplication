@@ -45,8 +45,8 @@ npm run dev
 
 ## 🛠️ Tech Stack
 - ⚛️ **Next.js** (React Framework)
-- 💻 **JavaScript/TypeScript** (depending on your implementation)
-- 🎨 **CSS Modules/Tailwind CSS** (for styling)
+- 💻 **JavaScript,TypeScript** 
+- 🎨 **CSS Modules,Tailwind CSS** (for styling)
 - 🌐 **REST API** (for fetching quiz data)
 
 ## 🤝 How to Contribute
